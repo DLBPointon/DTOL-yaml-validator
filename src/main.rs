@@ -1,8 +1,4 @@
-//use std::collections::BTreeMap;
-use std::fs::File;
-use std::io::Read;
-//use serde::Deserialize;
-//use serde_yaml::Value;
+use serde::Deserialize;
 
 //#[derive(Debug, Serialize, Deserialize)]
 /* struct DtolConfig {
@@ -39,24 +35,24 @@ use std::io::Read;
     stats: String,
 } */
 
-fn main() -> std::io::Result<()> {
+#[derive(Deserialize, PartialEq, Debug)]
+struct DarwinYaml {
+    species: String,
+    specimen: String,
+    projects: Vec<String>,
+    primary: String,
+    agp: String,
+    primary_contigs: String,
+    haplotigs: String,
+    mito: String,
+    mito_gb: String,
+    pipeline: Vec<String>,
+    stats: String,
+}
 
-    let mut file = match File::open("test-yaml/idCalVici1.yaml") {
-        Ok(file) => file,
-        Err(error) => {
-            match error.kind() {
-                std::io::ErrorKind::NotFound => {
-                    println!("Not Found!");
-                    return Ok(());
-                }
-                _ => return Err(error),
-            }
-        }
-    };
-    let mut contents = Vec::new();
-    file.read_to_end(&mut contents)?;
-
-    println!("File contents: {:?}", contents);
-
+fn main() -> Result<(), serde_yaml::Error> {
+    let input = include_str!("../test-yaml/idCalVici1-truncated.yaml");
+    let contents = serde_yaml::from_str::<DarwinYaml>(&input);
+    println!("{:?}", contents);
     Ok(())
 }

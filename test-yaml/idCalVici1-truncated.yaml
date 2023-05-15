@@ -1,0 +1,23 @@
+---
+species: Calliphora vicina
+specimen: idCalVici1
+projects:
+  - darwin
+primary: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/idCalVici1.20230205.fa.gz
+agp: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/scaffolds_FINAL.agp
+primary_contigs: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/idCalVici1.20230205.primary_contigs.fa.gz
+haplotigs: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/idCalVici1.20230205.haplotigs.fa.gz
+mito: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/idCalVici1-MT.fa.gz
+mito_gb: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/idCalVici1-MT.gb
+pipeline:
+  - hifiasm (version 0.16.1-r375)
+  - purge_dups (version 1.2.3)
+  - MitoHiFi (version 2)
+  - yahs (version 1.2a)
+stats: |
+  merqury QV (10X): 54.2
+  merqury KMER completeness (10X): 96.54
+  BUSCO: C:99.9%[S:97.0%,D:2.9%],F:0.0%,M:0.1%,n:1367
+  /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/idCalVici1.20230205.fa.gz
+  COMPOSITION	A = 257137988 (35.0%), C = 110492620 (15.0%), G = 110533696 (15.0%), T = 256894855 (34.9%), N = 20600 (0.0%), CpG = 29982502 (4.1%)
+  SCAFFOLD	sum = 735079759, n = 149, mean = 4933421.20134228, largest = 179972437, smallest = 1000
