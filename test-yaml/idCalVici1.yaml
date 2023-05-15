@@ -1,0 +1,65 @@
+---
+species: Calliphora vicina
+specimen: idCalVici1
+projects:
+  - darwin
+data_location: Sanger RW
+primary: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/idCalVici1.20230205.fa.gz
+agp: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/scaffolds_FINAL.agp
+primary_contigs: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/idCalVici1.20230205.primary_contigs.fa.gz
+haplotigs: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/idCalVici1.20230205.haplotigs.fa.gz
+mito: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/idCalVici1-MT.fa.gz
+mito_gb: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/idCalVici1-MT.gb
+mito_reference: 
+plastid: 
+plastid_gb: 
+chloro_reference: 
+pacbio_read_dir: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/genomic_data/idCalVici1/pacbio
+10x_read_dir: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/genomic_data/idCalVici1/10x
+hic_read_dir: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/genomic_data/idCalVici1/hic-arima2
+pacbio_read_type: hifi
+hic_kit: Arima2
+hic: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/scaffolds_FINAL.hic
+pretext: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/scaffolds_FINAL.pretext
+hic_map_img: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/scaffolds_FINAL_FullMap.png
+kmer_spectra_img: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/scaffolds_FINAL.css.spectra-cn.ln.png
+busco_lineage: insecta_odb10
+busco_gene_set_species: 
+karyotype: 
+karyotype_source: 
+ploidy: diploid
+jira_queue: 
+pipeline:
+  - hifiasm (version 0.16.1-r375)
+  - purge_dups (version 1.2.3)
+  - MitoHiFi (version 2)
+  - yahs (version 1.2a)
+notes:
+  - there is no species karyotype available on GoaT
+  - there is another scaffolding result generated with salsa
+  - salsa scaffolds FASTA file: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/idCalVici1_salsa.20230205.fa.gz
+  - salsa scaffolds AGP file: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/idCalVici1_salsa.20230205.agp
+  - salsa scaffolds HIC map: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/idCalVici1_salsa.20230205.hic
+  - salsa scaffolds pretext map: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/idCalVici1_salsa.20230205.pretext
+  - salsa scaffolds HIC image: /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/idCalVici1_salsa.20230205.FullMap.png
+stats: |
+  merqury QV (10X): 54.2
+  merqury KMER completeness (10X): 96.54
+  BUSCO: C:99.9%[S:97.0%,D:2.9%],F:0.0%,M:0.1%,n:1367
+  /lustre/scratch124/tol/projects/darwin/data/insects/Calliphora_vicina/assembly/draft/idCalVici1.20230205/idCalVici1.20230205.fa.gz
+  COMPOSITION	A = 257137988 (35.0%), C = 110492620 (15.0%), G = 110533696 (15.0%), T = 256894855 (34.9%), N = 20600 (0.0%), CpG = 29982502 (4.1%)
+  SCAFFOLD	sum = 735079759, n = 149, mean = 4933421.20134228, largest = 179972437, smallest = 1000
+  SCAFFOLD	N50 = 123087375, L50 = 3
+  SCAFFOLD	N60 = 119530680, L60 = 4
+  SCAFFOLD	N70 = 78460015, L70 = 5
+  SCAFFOLD	N80 = 57119468, L80 = 6
+  SCAFFOLD	N90 = 8288427, L90 = 7
+  SCAFFOLD	N100 = 1000, L100 = 149
+  CONTIG	sum = 735059159, n = 252, mean = 2916901.42460317, largest = 92721000, smallest = 1000
+  CONTIG	N50 = 38802692, L50 = 6
+  CONTIG	N60 = 22868000, L60 = 9
+  CONTIG	N70 = 12817036, L70 = 13
+  CONTIG	N80 = 6114838, L80 = 21
+  CONTIG	N90 = 2150281, L90 = 39
+  CONTIG	N100 = 1000, L100 = 252
+  GAP	sum = 20600, n = 103, mean = 200, largest = 200, smallest = 200

@@ -1,0 +1,68 @@
+---
+species: Nitzschia sp. pyKryTriq1
+specimen: uoNitSpea1
+projects:
+  - ASG
+data_location: Sanger RW
+primary: /lustre/scratch124/tol/projects/asg/data/protists/Kryptoperidinium_triquetrum/assembly/draft/uoNitSpea1.20230317/uoNitSpea1.20230317.fa.gz
+agp: /lustre/scratch124/tol/projects/asg/data/protists/Kryptoperidinium_triquetrum/assembly/draft/uoNitSpea1.20230317/scaffolds_FINAL.agp
+primary_contigs: /lustre/scratch124/tol/projects/asg/data/protists/Kryptoperidinium_triquetrum/assembly/draft/uoNitSpea1.20230317/uoNitSpea1.20230317.primary_contigs.fa.gz
+haplotigs: /lustre/scratch124/tol/projects/asg/data/protists/Kryptoperidinium_triquetrum/assembly/draft/uoNitSpea1.20230317/uoNitSpea1.20230317.haplotigs.fa.gz
+mito: /lustre/scratch124/tol/projects/asg/data/protists/Kryptoperidinium_triquetrum/assembly/draft/uoNitSpea1.20230317/uoNitSpea1-MT.fa.gz
+mito_gb: /lustre/scratch124/tol/projects/asg/data/protists/Kryptoperidinium_triquetrum/assembly/draft/uoNitSpea1.20230317/uoNitSpea1-MT.gb
+mito_reference: 
+plastid: /lustre/scratch124/tol/projects/asg/data/protists/Kryptoperidinium_triquetrum/assembly/draft/uoNitSpea1.20230317/uoNitSpea1-PT.fa.gz
+plastid_gb: /lustre/scratch124/tol/projects/asg/data/protists/Kryptoperidinium_triquetrum/assembly/draft/uoNitSpea1.20230317/uoNitSpea1-PT.gb
+chloro_reference: 
+pacbio_read_dir: /lustre/scratch124/tol/projects/asg/data/protists/Kryptoperidinium_triquetrum/genomic_data/pyKryTriq1/pacbio
+10x_read_dir: 
+hic_read_dir: /lustre/scratch124/tol/projects/asg/data/protists/Kryptoperidinium_triquetrum/genomic_data/pyKryTriq1/hic-arima2
+pacbio_read_type: hifi
+hic_kit: Arima2
+hic: /lustre/scratch124/tol/projects/asg/data/protists/Kryptoperidinium_triquetrum/assembly/draft/uoNitSpea1.20230317/scaffolds_FINAL.hic
+pretext: /lustre/scratch124/tol/projects/asg/data/protists/Kryptoperidinium_triquetrum/assembly/draft/uoNitSpea1.20230317/scaffolds_FINAL.pretext
+hic_map_img: /lustre/scratch124/tol/projects/asg/data/protists/Kryptoperidinium_triquetrum/assembly/draft/uoNitSpea1.20230317/scaffolds_FINAL_FullMap.png
+kmer_spectra_img: 
+busco_lineage: stramenopiles_odb10
+busco_gene_set_species: 
+karyotype: 
+karyotype_source: 
+ploidy: diploid
+jira_queue: 
+pipeline:
+  - hifiasm (version 0.16.1)
+  - purge_dups (version 1.2.3)
+  - MitoHiFi (version 2)
+  - yahs (version 1.1a.2)
+notes:
+  - Nitzschia cobiont of pyKryTriq1
+  - Suspected tetraploid
+  - hic data was from pyKryTriq1
+  - there is no species karyotype available on GoaT
+  - there is another scaffolding result generated with salsa
+  - salsa scaffolds FASTA file: /lustre/scratch124/tol/projects/asg/data/protists/Kryptoperidinium_triquetrum/assembly/draft/uoNitSpea1.20230317/uoNitSpea1_salsa.20230317.fa.gz
+  - salsa scaffolds AGP file: /lustre/scratch124/tol/projects/asg/data/protists/Kryptoperidinium_triquetrum/assembly/draft/uoNitSpea1.20230317/uoNitSpea1_salsa.20230317.agp
+  - salsa scaffolds HIC map: /lustre/scratch124/tol/projects/asg/data/protists/Kryptoperidinium_triquetrum/assembly/draft/uoNitSpea1.20230317/uoNitSpea1_salsa.20230317.hic
+  - salsa scaffolds pretext map: /lustre/scratch124/tol/projects/asg/data/protists/Kryptoperidinium_triquetrum/assembly/draft/uoNitSpea1.20230317/uoNitSpea1_salsa.20230317.pretext
+  - salsa scaffolds HIC image: /lustre/scratch124/tol/projects/asg/data/protists/Kryptoperidinium_triquetrum/assembly/draft/uoNitSpea1.20230317/uoNitSpea1_salsa.20230317.FullMap.png
+stats: |
+  merqury QV (10X): 
+  merqury KMER completeness (10X): 
+  BUSCO: C:99.0%[S:95.0%,D:4.0%],F:0.0%,M:1.0%,n:100
+  /lustre/scratch124/tol/projects/asg/data/protists/Kryptoperidinium_triquetrum/assembly/draft/uoNitSpea1.20230317/uoNitSpea1.20230317.fa.gz
+  COMPOSITION	A = 10569963 (25.9%), C = 9853831 (24.1%), G = 9861892 (24.1%), T = 10590963 (25.9%), N = 4000 (0.0%), CpG = 4691306 (11.5%)
+  SCAFFOLD	sum = 40880649, n = 22, mean = 1858211.31818182, largest = 4728560, smallest = 12444
+  SCAFFOLD	N50 = 2316609, L50 = 6
+  SCAFFOLD	N60 = 2206533, L60 = 8
+  SCAFFOLD	N70 = 1750735, L70 = 10
+  SCAFFOLD	N80 = 1647986, L80 = 12
+  SCAFFOLD	N90 = 1332194, L90 = 15
+  SCAFFOLD	N100 = 12444, L100 = 22
+  CONTIG	sum = 40876649, n = 42, mean = 973253.547619048, largest = 4413582, smallest = 12444
+  CONTIG	N50 = 1921389, L50 = 7
+  CONTIG	N60 = 1889134, L60 = 9
+  CONTIG	N70 = 1332194, L70 = 12
+  CONTIG	N80 = 1078260, L80 = 16
+  CONTIG	N90 = 618342, L90 = 20
+  CONTIG	N100 = 12444, L100 = 42
+  GAP	sum = 4000, n = 20, mean = 200, largest = 200, smallest = 200

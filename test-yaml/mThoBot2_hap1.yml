@@ -1,0 +1,23 @@
+species: Thomomys bottae
+specimen: mThoBot2
+projects: 
+  - vgp
+data_location: S3
+release_to: S3
+haplotype_to_curate: hap1
+hap1: s3://genomeark/species/Thomomys_bottae/mThoBot2/assembly_vgp_HiC_2.0/mThoBot2.HiC.hap1.20230503.fasta.gz
+hap2: s3://genomeark/species/Thomomys_bottae/mThoBot2/assembly_vgp_HiC_2.0/mThoBot2.HiC.hap2.20230503.fasta.gz
+pretext_hap1: s3://genomeark/species/Thomomys_bottae/mThoBot2/assembly_vgp_HiC_2.0/evaluation/hap1/pretext/mThoBot2_hap1__s2_heatmap.pretext
+pretext_hap2: s3://genomeark/species/Thomomys_bottae/mThoBot2/assembly_vgp_HiC_2.0/evaluation/hap2/pretext/mThoBot2_hap2__s2_heatmap.pretext
+kmer_spectra_img: s3://genomeark/species/Thomomys_bottae/mThoBot2/assembly_vgp_HiC_2.0/evaluation/merqury_postpurge/mThoBot2_png/
+mito: s3://genomeark/species/Thomomys_bottae/mThoBot2/assembly_MT_rockefeller/mThoBot2.MT.20230504.fasta.gz
+mito_gb: s3://genomeark/species/Thomomys_bottae/mThoBot2/assembly_MT_rockefeller/mThoBot2.MT.20230504.gb
+pacbio_read_dir: s3://genomeark/species/Thomomys_bottae/mThoBot2/genomic_data/pacbio_hifi/
+pacbio_read_type: hifi
+hic_read_dir: s3://genomeark/species/Thomomys_bottae/mThoBot2/genomic_data/arima/
+pipeline:
+  - hifiasm (0.19.3+galaxy0)
+  - purge_dups (1.2.6+galaxy0)
+  - yahs (1.2a.2+galaxy0)
+assembled_by_group: Rockefeller
+notes: This was a hifiasm-HiC assembly of mThoBot2, resulting in two complete haplotypes. This individual did not have bionano data. HiC scaffolding was performed with yahs. The HiC prep was Arima kit 2. I am submitting both hap1 & hap2 for dual curation. This is the curation ticket for hap1. 
