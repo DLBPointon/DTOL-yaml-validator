@@ -1,10 +1,12 @@
+use std::fs;
+use std::env;
 use serde::Deserialize;
 
-//#[derive(Debug, Serialize, Deserialize)]
-/* struct DtolConfig {
+#[derive(Debug, PartialEq, Deserialize)]
+struct FullDarwinYaml {
     species: String,
     specimen: String,
-    projects: String,
+    projects: Vec<String>,
     data_location: String,
     primary_agp: String,
     primary_contigs: String,
@@ -16,7 +18,7 @@ use serde::Deserialize;
     plastid_gb: String,
     chloro_reference: String,
     pacbio_read_dir: String,
-    10x_read_dir: String,
+    x10x_read_dir: String,
     hic_read_dir: String,
     pacbio_read_type: String,
     hic_kit: String,
@@ -30,10 +32,10 @@ use serde::Deserialize;
     karyotype_source:  String,
     ploidy: String,
     jira_queue: String,
-    pipeline: String,
+    pipeline: Vec<String>,
     notes: String,
     stats: String,
-} */
+}
 
 #[derive(Deserialize, PartialEq, Debug)]
 struct DarwinYaml {
@@ -50,9 +52,20 @@ struct DarwinYaml {
     stats: String,
 }
 
-fn main() -> Result<(), serde_yaml::Error> {
-    let input = include_str!("../test-yaml/idCalVici1-truncated.yaml");
-    let contents = serde_yaml::from_str::<DarwinYaml>(&input);
-    println!("{:?}", contents);
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+    
+    let args: Vec<String> = env::args().collect();
+
+    let file = fs::read_to_string(&args[2])?;
+
+    // TODO: here it needs to id `projects:\r\n  - darwin\r\n` and
+    // parse the project and use that to decide on the Yaml struc to use.
+
+    let contents = serde_yaml::from_str::<DarwinYaml>(&file);
+
+    println!("{:?}", file); // <-- Raw output
+    //println!("{:?}", contents); <-- Yaml Deserialised
+    println!("Project argument: {}", &args[1]);
+    println!("File for ingesting: {}", &args[2]);
     Ok(())
 }
