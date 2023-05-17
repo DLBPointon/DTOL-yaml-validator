@@ -70,19 +70,14 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     println!("{}",regexed_project);
 
-    if regexed_project == "darwin" {
-        println!("Reported Project is: {}", regexed_project)
-    } else if regexed_project == "asg" {
-        println!("Reported Project is: {}", regexed_project)
-    } else if regexed_project == "genomeark" {
-        println!("Reported Project is: {}", regexed_project)
-    } else if regexed_project == "erga" {
-        println!("Reported Project is: {}", regexed_project)
-    } else if regexed_project == "faculty" {
-        println!("Reported Project is: {}", regexed_project)
-    } else {
-        println!("I dunno")
-    };
+    match regexed_project {
+        "darwin" => println!("Reported Project is: {}", regexed_project),
+        "asg" => println!("Reported Project is: {}", regexed_project),
+        "genomeark" => println!("Reported Project is: {}", regexed_project),
+        "erga" => println!("Reported Project is: {}", regexed_project),
+        "faculty" => println!("Reported Project is: {}", regexed_project),
+        _ => println!("I dunno"),
+    }
 
     Ok(())
 }
