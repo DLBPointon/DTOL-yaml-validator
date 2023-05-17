@@ -9,3 +9,4 @@ edition = "2021"
 serde = { version = "1.0.163", features = ["derive"] }
 serde_yaml = "0.9.21"
 fs = "0.0.5"
+regex = "1"
